@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ItemList from './ItemList'; // import ItemList component
-import ItemDetail from './ItemDetail'; // import ItemDetail component
+import ItemList from './ItemList.js'; 
+import ItemDetail from './ItemDetail.js';
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <div>
     {/* Do not remove the main div */}
       <Routes>
-        <Route path="/" element={<ItemList />} /> {/* Home page with item list */}
-        <Route path="/items/:id" element={<ItemDetail />} /> {/* Dynamic item detail page */}
+        <Route path="/" element={<ItemList />} />
+        <Route path="/items/:id" element={<ItemDetail />} /> 
       </Routes>
   </div>  
   </Router>
