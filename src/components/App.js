@@ -1,13 +1,21 @@
 
-import React from "react";
-import './../styles/App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ItemList from './ItemList'; // import ItemList component
+import ItemDetail from './ItemDetail'; // import ItemDetail component
 
-const App = () => {
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
+    <Router>
+      <div>
+    {/* Do not remove the main div */}
+      <Routes>
+        <Route path="/" element={<ItemList />} /> {/* Home page with item list */}
+        <Route path="/items/:id" element={<ItemDetail />} /> {/* Dynamic item detail page */}
+      </Routes>
+  </div>  
+  </Router>
+  );
 }
 
-export default App
+export default App;
